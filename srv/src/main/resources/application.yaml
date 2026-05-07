@@ -1,0 +1,32 @@
+---
+spring:
+  config.activate.on-profile: default
+  sql.init.platform: h2
+  autoconfigure:
+    exclude:
+      #  Exclude Spring Security auto config for local dev
+      - org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+      - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
+
+cds:
+  data-source.auto-config.enabled: false
+  security:
+    authentication:
+      mode: never          # ✅ No auth for local dev
+    mock:
+      users:
+        - name: user
+          password: ""
+management:
+  endpoint:
+    health:
+      show-components: always
+      probes.enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    defaults.enabled: false
+    ping.enabled: true
+    db.enabled: true

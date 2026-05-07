@@ -1,0 +1,29 @@
+{
+  "name": "inventory-management-cap-cds",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@sap/cds-dk": "^9.7.2"
+  },
+  "dependencies": {
+    "@sap/cds": "^9.9.0",
+    "sqlite3": "^6.0.1"
+  },
+  "sapux": [
+    "app/inventory-ui"
+  ],
+  "cds": {
+    "requires": {
+      "db": {
+        "[development]": {
+          "kind": "sqlite"
+        },
+        "[production]": {
+          "kind": "hana"
+        }
+      },
+      "auth": {
+        "kind": "dummy"
+      }
+    }
+  }
+}
