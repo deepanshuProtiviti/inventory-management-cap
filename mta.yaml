@@ -1,0 +1,27 @@
+ID: inventory-management-cap
+_schema-version: '3.1'
+version: 1.0.0
+
+modules:
+  - name: inventory-srv
+    type: java
+    path: srv
+    build-parameters:
+      builder: custom
+      commands:
+        - mvn clean package -DskipTests
+      build-result: target/*exec.jar
+    requires:
+      - name: inventory-hdi
+
+  - name: inventory-db
+    type: hdb
+    path: db
+    requires:
+      - name: inventory-hdi
+
+resources:
+  - name: inventory-hdi
+    type: com.sap.xs.hdi-container
+    parameters:
+      service-name: inventory-hdi
