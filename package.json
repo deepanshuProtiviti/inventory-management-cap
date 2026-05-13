@@ -5,6 +5,7 @@
     "@sap/cds-dk": "^9.7.2"
   },
   "dependencies": {
+    "@cap-js/sqlite": "^2.4.0",
     "@sap/cds": "^9.9.0",
     "sqlite3": "^6.0.1"
   },

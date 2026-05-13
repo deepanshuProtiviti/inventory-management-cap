@@ -1,2 +1,0 @@
-sap.ui.define(["sap/fe/test/JourneyRunner","inventory/ui/inventoryui/test/integration/pages/ProductsList","inventory/ui/inventoryui/test/integration/pages/ProductsObjectPage"],function(t,e,n){"use strict";var i=new t({launchUrl:sap.ui.require.toUrl("inventory/ui/inventoryui")+"/test/flpSandbox.html#inventoryuiinventoryui-tile",pages:{onTheProductsList:e,onTheProductsObjectPage:n},async:true});return i});
-//# sourceMappingURL=JourneyRunner.js.map

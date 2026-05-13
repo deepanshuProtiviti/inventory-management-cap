@@ -1,0 +1,14 @@
+---
+applications:
+  - name: inventory-management-cap
+    path: gen/srv
+    buildpacks:
+      - nodejs_buildpack
+    memory: 512M
+    disk-quota: 1G
+    instances: 1
+    env:
+      DEBUG: "*"
+      NODE_ENV: production
+    routes:
+      - route: inventory-management-cap-${random-word}.cfapps.${region}.hana.ondemand.com

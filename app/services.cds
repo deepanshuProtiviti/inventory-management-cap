@@ -1,2 +1,2 @@
 
-using from './inventory-ui/annotations';
+using from './products-ui/annotations';
