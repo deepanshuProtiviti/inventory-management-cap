@@ -1,0 +1,31 @@
+<mvc:View
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	controllerName="inventory.ui.dashboardui.controller.Dashboard">
+
+	<App id="app">
+		<pages>
+			<Page id="page" title="Inventory Dashboard" showHeader="true" enableScrolling="true">
+				<content>
+					<f:GridContainer id="gridContainer" class="sapUiContentPadding">
+						<f:layout>
+							<f:GridContainerSettings rowSize="150px" columnSize="150px" gap="16px" />
+						</f:layout>
+					</f:GridContainer>
+				</content>
+				<footer>
+					<Bar id="footer">
+						<contentRight>
+							<Button
+								text="Refresh"
+								press="onRefresh"
+								icon="sap-icon://refresh" />
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+
+</mvc:View>

@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inventory Management</title>
+    <title>Inventory Dashboard</title>
     <style>
-        html, body, body > div, #container, #container-uiarea {
+        html, body, body > div, #app {
             height: 100%;
+            margin: 0;
+            padding: 0;
         }
     </style>
     <script
         id="sap-ui-bootstrap"
         src="https://sapui5.hana.ondemand.com/1.147.1/resources/sap-ui-core.js"
         data-sap-ui-theme="sap_horizon"
+        data-sap-ui-libs="sap.m,sap.ui.core,sap.f,sap.ui.layout"
         data-sap-ui-resource-roots='{
             "inventory.ui.dashboardui": "./"
         }'
@@ -23,13 +26,12 @@
         data-sap-ui-frame-options="trusted"
     ></script>
 </head>
-<body class="sapUiBody sapUiSizeCompact" id="content">
-    <div
+<body class="sapUiBody sapUiSizeCompact">
+    <div id="root"
         data-sap-ui-component
         data-name="inventory.ui.dashboardui"
-        data-id="container"
+        data-id="component"
         data-settings='{"id" : "inventory.ui.dashboardui"}'
-        data-handle-validation="true"
     ></div>
 </body>
 </html>
