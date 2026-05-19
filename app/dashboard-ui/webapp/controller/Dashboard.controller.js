@@ -37,7 +37,7 @@ sap.ui.define([
 			oViewModel.setProperty("/busy", true);
 
 			// Use fetch to call OData service
-			fetch("/odata/v4/service/InventoryService/Products")
+			fetch("/service/InventoryService/Products")
 				.then(response => {
 					console.log("Fetch response received, status:", response.status);
 					if (!response.ok) {

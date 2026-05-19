@@ -12,9 +12,9 @@ server:
       configuration:
         backend:
           - path: /service
-            url: http://localhost:8080
+            url: http://localhost:4004
           - path: /odata/v4
-            url: http://localhost:8080
+            url: http://localhost:4004
         ignoreCertErrors: false
         ui5:
           path:
