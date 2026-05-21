@@ -8,9 +8,9 @@
 		<pages>
 			<Page id="page" title="Inventory Dashboard" showHeader="true" enableScrolling="true">
 				<content>
-					<f:GridContainer id="gridContainer" class="sapUiContentPadding">
+					<f:GridContainer id="gridContainer">
 						<f:layout>
-							<f:GridContainerSettings rowSize="150px" columnSize="150px" gap="16px" />
+							<f:GridContainerSettings rowSize="200px" columnSize="200px" gap="36px" />
 						</f:layout>
 					</f:GridContainer>
 				</content>
