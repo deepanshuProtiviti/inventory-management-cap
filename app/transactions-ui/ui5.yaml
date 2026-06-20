@@ -10,7 +10,7 @@ server:
     - name: ui5-middleware-simpleproxy
       afterMiddleware: compression
       configuration:
-        baseUri: "http://localhost:4004"
+        baseUri: "http://localhost:8080"
         mountPath: "/service"
 
     - name: fiori-tools-appreload

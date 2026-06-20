@@ -31,3 +31,5 @@ hs_err*
 .reloadtrigger
 
 .env1
+# added by cds
+.cdsrc-private.json

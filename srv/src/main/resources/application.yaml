@@ -1,7 +1,7 @@
----
 spring:
-  config.activate.on-profile: default
-  sql.init.platform: h2
+  sql:
+    init:
+      schema-locations: classpath:schema-h2.sql
   autoconfigure:
     exclude:
       #  Exclude Spring Security auto config for local dev
@@ -9,14 +9,15 @@ spring:
       - org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration
 
 cds:
-  data-source.auto-config.enabled: false
+  data-source.auto-config.enabled: true
   security:
     authentication:
-      mode: never          # ✅ No auth for local dev
-    mock:
-      users:
-        - name: user
-          password: ""
+      mode: never
+    authenticateUnknownEndpoints: false
+
+  odataV4:
+    endpoint:
+      path: /
 management:
   endpoint:
     health:
@@ -30,3 +31,6 @@ management:
     defaults.enabled: false
     ping.enabled: true
     db.enabled: true
+
+
+

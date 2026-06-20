@@ -1,23 +1,27 @@
 specVersion: "4.0"
+
 metadata:
   name: inventory.ui.productsui
+
 type: application
+
 server:
   customMiddleware:
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
         backend:
-          - path: /odata
-            url: http://localhost:4004
           - path: /service
-            url: http://localhost:4004
-        ignoreCertErrors: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+            url: http://localhost:8080
+
+        ignoreCertErrors: false
+
         ui5:
           path:
             - /resources
             - /test-resources
-          url: https://sapui5.hana.ondemand.com
+          url: https://ui5.sap.com
+
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:

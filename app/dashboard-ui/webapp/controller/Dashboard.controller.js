@@ -64,7 +64,7 @@ sap.ui.define([
 					oViewModel.setProperty("/busy", false);
 
 					// Bind the grid container items to products
-					this._bindGridItems(aProducts);
+					this._bindGridItems(aProducts);is i
 				})
 				.catch(error => {
 					console.error("Error loading products:", error);

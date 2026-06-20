@@ -7,7 +7,7 @@
     "description": "Dashboard for inventory management",
     "dataSources": {
       "mainService": {
-        "uri": "/odata/v4/service/InventoryService/",
+        "uri": "/service/InventoryService/",
         "type": "OData",
         "settings": {
           "odataVersion": "4.0"

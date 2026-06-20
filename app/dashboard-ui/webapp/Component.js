@@ -26,7 +26,7 @@ sap.ui.define([
             try {
                 console.log("Creating ODataModel...");
                 const oDataModel = new ODataModel({
-                    serviceUrl: "/odata/v4/service/InventoryService/",
+                    serviceUrl: "/service/InventoryService/",
                     synchronizationMode: "None",
                     autoExpandSelect: true
                 });
