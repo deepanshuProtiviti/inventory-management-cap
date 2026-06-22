@@ -23,5 +23,3 @@ modules:
 resources:
   - name: inventory-hdi
     type: com.sap.xs.hdi-container
-    parameters:
-      service-name: inventory-hdi
